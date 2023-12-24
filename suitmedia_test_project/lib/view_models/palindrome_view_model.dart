@@ -25,7 +25,12 @@ class PalindromeViewModel extends ChangeNotifier {
       builder: (BuildContext context) {
         return AlertDialog(
           title: const Text('Result'),
-          content: Text(result),
+          content: Text(result,
+              style: const TextStyle(
+                fontWeight: FontWeight.w500,
+                fontSize: 24,
+              ),
+              textAlign: TextAlign.center),
           actions: <Widget>[
             TextButton(
               onPressed: () {

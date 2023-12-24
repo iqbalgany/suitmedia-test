@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:suitmedia_test_project/view_models/palindrome_view_model.dart';
 import 'package:suitmedia_test_project/view_models/user_view_model.dart';
+import 'package:suitmedia_test_project/views/screens/first_screen.dart';
 import 'package:suitmedia_test_project/views/screens/third_screen.dart';
 import 'package:suitmedia_test_project/views/widgets/custom_button.dart';
 
@@ -41,6 +42,19 @@ class _SecondScreenState extends State<SecondScreen> {
           fontWeight: FontWeight.w600,
           fontSize: 18,
           color: Colors.black,
+        ),
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios_new_rounded,
+          ),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const FirstScreen(),
+              ),
+            );
+          },
         ),
       ),
       body: Consumer<UserViewModel>(
