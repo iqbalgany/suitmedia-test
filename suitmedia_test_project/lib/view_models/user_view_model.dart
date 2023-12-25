@@ -36,18 +36,8 @@ class UserViewModel extends ChangeNotifier {
 
     this.users = users;
 
-    page = 1;
     return await userService.getUserData();
   }
-
-  int _page = 1;
-
-  set page(int page) {
-    _page = page;
-    notifyListeners();
-  }
-
-  int get page => _page;
 
   List<UserModel> _users = [];
 
